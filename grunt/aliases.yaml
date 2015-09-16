@@ -1,0 +1,9 @@
+default:
+  - 'clean'
+  - 'concurrent'
+  - 'postcss'
+dev:
+  - 'default'
+  - 'watch'
+serve:
+  - 'connect'

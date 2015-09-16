@@ -1,0 +1,108 @@
+// Mobile enhancements
+* {
+  // make transparent link selection, adjust last value opacity 0 to 1.0
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+%body-mobile {
+  // prevent copy paste, to allow, change 'none' to 'text'
+  -webkit-user-select: none;
+
+  // prevent callout to copy image, etc when tap to hold
+  -webkit-touch-callout: none;
+
+  // prevent webkit from resizing text to fit
+  -webkit-text-size-adjust: none;
+}
+
+html,
+input,
+textarea,
+select,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  height: 100%;
+  color: #333;
+  @extend %body-mobile;
+}
+
+a {
+  text-decoration: none;
+  color: #8f989c;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// app container
+@include b(o-app) {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// header
+@include b(o-header) {
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgba(#f00, .2);
+}
+
+// content
+@include b(o-content) {
+  padding: 20px;
+  background-color: rgba(blue, .2);
+}
+
+// footer
+@include b(o-footer) {
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgba(green, .2);
+  text-align: center;
+}
+
+// logo
+.c-logo {
+  float: left;
+  margin-right: 20px;
+  background-color: rgba(magenta, .3);
+  width: 40px;
+  height: 40px;
+}
+
+// navigation
+@include b(c-nav) {
+  margin: 0;
+
+  @include e(item) {
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+    list-style-type: none;
+
+    &:hover {
+      border-bottom: 1px dotted #000;
+    }
+  }
+}

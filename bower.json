@@ -1,0 +1,31 @@
+{
+  "name": "datapine test",
+  "version": "1.0.0",
+  "authors": [
+    "Andrei Bunulu <bunulu@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "backbone": "~1.2.3",
+    "backbone.localStorage": "backbone.localstorage#~1.1.16",
+    "backbone.marionette": "marionette#~2.4.3",
+    "highcharts": "~4.1.8",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "normalize-scss": "~3.0.3",
+    "requirejs": "~2.1.17",
+    "requirejs-text": "2.x",
+    "underscore": "~1.8.3"
+  },
+  "dependencies": {}
+}
