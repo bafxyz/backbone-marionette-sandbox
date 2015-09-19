@@ -15,8 +15,8 @@ module.exports =
 
 	js:
 		files: [
-			'app/js/**/**/*.js'
-			'app/js/templates/*.tmpl'
+			'app/js/**/*.js'
+			'app/js/templates/**/*.tmpl'
 		]
 		tasks: [
 			'requirejs'
@@ -27,6 +27,7 @@ module.exports =
 
 	index:
 		files: [
+			'app/data.json'
 			'app/index.html'
 		]
 		tasks: [

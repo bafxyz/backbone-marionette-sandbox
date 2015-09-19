@@ -29,6 +29,7 @@
     "load-grunt-config": "^0.17.2",
     "load-grunt-tasks": "^3.2.0",
     "lost": "^6.6.0",
+    "postcss-clearfix": "^0.2.0",
     "time-grunt": "^1.2.1"
   }
 }

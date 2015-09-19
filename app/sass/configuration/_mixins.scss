@@ -200,3 +200,49 @@ $modifierSeparator: '--';
 //     }
 //   }
 // }
+
+
+// Media query
+//==========================================================================
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $breakpoint-mobile) { @content; }
+  } @else
+
+  if $media == mobile-tablet {
+    @media only screen and (max-width: $breakpoint-tablet) { @content; }
+  }  @else
+  if $media == tablet {
+    @media only screen and (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) { @content; }
+  }  @else
+  if $media == tablet-desktop {
+    @media only screen and (min-width: $breakpoint-mobile + 1) { @content; }
+  }  @else
+  if $media == desktop {
+    @media only screen and (min-width: $breakpoint-tablet + 1) { @content; }
+  }
+}
+
+// Breakpoints
+//==========================================================================
+
+@mixin mobile {
+  @include respond-to(mobile) { @content; }
+}
+
+@mixin mobile-tablet {
+  @include respond-to(mobile-tablet) { @content; }
+}
+
+@mixin tablet {
+  @include respond-to(tablet) { @content; }
+}
+
+@mixin tablet-desktop {
+  @include respond-to(tablet-desktop) { @content; }
+}
+
+@mixin desktop {
+  @include respond-to(desktop) { @content; }
+}

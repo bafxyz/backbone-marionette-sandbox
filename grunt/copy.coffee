@@ -5,6 +5,7 @@ module.exports =
 		expand: true
 		dot: true
 		src: [
+			'data.json'
 			'index.html'
 			'img/**/*.{png,jpg,jpeg,gif,webp,svg}'
 			'bower_components/requirejs/require.js'

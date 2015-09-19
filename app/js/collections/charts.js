@@ -15,5 +15,5 @@ define([
 		localStorage: new Store('charts-backbone')
 	});
 
-	return new ChartsCollection();
+	return ChartsCollection;
 });
